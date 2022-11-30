@@ -3,13 +3,8 @@ using System.Linq.Expressions;
 
 namespace MagicVilla_VillaAPI.Repository.IRepository
 {
-    public interface IVillaRepository
+    public interface IVillaRepository:IRepository<Villa>
     {
-        Task<List<Villa>> GetAllAsync(Expression<Func<Villa,bool>> filter = null);
-        Task<Villa> GetAsync(Expression<Func<Villa,bool>> filter = null,bool tracked=true);
-        Task CreateAsync(Villa entiry);
-        Task UpdateAsync(Villa entiry);
-        Task RemoveAsync(Villa entiry);
-        Task SaveAsync();
+        Task<Villa> UpdateAsync(Villa entiry);     
     }
 }
