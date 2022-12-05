@@ -22,7 +22,7 @@ namespace MagicVilla_VillaAPI.Controllers
             _dbVillaNumber = dbVillaNumber;
             _maper = mapper;
             this._response = new APIResponse();
-            _dbVilla = dbVilla; 
+            _dbVilla = dbVilla;
         }
 
         [HttpGet]
@@ -91,13 +91,15 @@ namespace MagicVilla_VillaAPI.Controllers
                     ModelState.AddModelError("CustomError", "Villa Number already Exists");
                     return BadRequest(ModelState);
                 }
-                if(await _dbVilla.GetAsync(v => v.Id == villaNumberCreateDTO.VillaNo)==null)
+                if (await _dbVilla.GetAsync(v => v.Id == villaNumberCreateDTO.VillaNo) == null)
                 {
-                    return BadRequest();
+                    ModelState.AddModelError("CustomError", "Villa ID is Invalid");
+
+                    return BadRequest(ModelState);
                 }
                 if (villaNumberCreateDTO == null)
                 {
-                    
+
                     return BadRequest(villaNumberCreateDTO);
                 }
                 //if (villaDTO.Id > 0)
@@ -192,7 +194,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
             if (patchDTO == null || id == 0)
             {
-                _response.StatusCode=HttpStatusCode.BadRequest;
+                _response.StatusCode = HttpStatusCode.BadRequest;
                 return BadRequest();
             }
             var villaNumber = await _dbVillaNumber.GetAsync(v => v.VillaNo == id, false);
