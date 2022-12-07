@@ -1,7 +1,13 @@
 ﻿namespace MagicVilla_Utility
 {
-    public class Class1
+    public class SD
     {
+      public  enum ApiType
+        {
+            GET,
+            POST, PUT, DELETE  
+
+        }
 
     }
 }

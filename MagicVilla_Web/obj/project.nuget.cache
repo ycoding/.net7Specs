@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GA3Uexr5jddLa8UHLBRD9Zz45Vzlytr2ylXECgirO5KZWVasrj2JFV1JWIQyQdzE/teX+FngLPvBZTbdlRDlOQ==",
+  "dgSpecHash": "S+atw621FD0UjQ1NpTWGkWEdoRDinXmnqP4PrcKSE6Q9FBwSYSDsPqrUudJGiXKT9D7+zfF47ykLa9Y4L1S8+g==",
   "success": true,
   "projectFilePath": "C:\\WorkSpace\\Misc\\.Net\\MagicVilla\\MagicVilla_Web\\MagicVilla_Web.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Younes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Younes\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Younes\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Younes\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Younes\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
