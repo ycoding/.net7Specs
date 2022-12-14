@@ -13,8 +13,7 @@ namespace MagicVilla_VillaAPI.Controllers
     public class VillaAPIController : ControllerBase
     {
         protected APIResponse _response;
-        private readonly IVillaRepository 
-            _dbVilla;
+        private readonly IVillaRepository _dbVilla;
         private readonly IMapper _maper;
 
         public VillaAPIController(IVillaRepository dbVilla, IMapper mapper)
@@ -94,7 +93,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
                 if (villaCreateDTO == null)
                 {
-                    
+
                     return BadRequest(villaCreateDTO);
                 }
                 //if (villaDTO.Id > 0)
@@ -119,11 +118,11 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
 
-        [HttpDelete("{id:int}", Name = "DelteVila")]
+        [HttpDelete("{id:int}", Name = "DeleteVilla")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<APIResponse>> DeleteVailla(int id)
+        public async Task<ActionResult<APIResponse>> DeleteVilla(int id)
         {
             try
             {
@@ -189,7 +188,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
             if (patchDTO == null || id == 0)
             {
-                _response.StatusCode=HttpStatusCode.BadRequest;
+                _response.StatusCode = HttpStatusCode.BadRequest;
                 return BadRequest();
             }
             var villa = await _dbVilla.GetAsync(v => v.Id == id, false);
